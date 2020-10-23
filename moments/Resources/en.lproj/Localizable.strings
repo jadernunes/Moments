@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  moments
+
+  Created by Jader Borba Nunes on 23/10/20.
+  
+*/
+
+
+"titleSectionHome" = "SELECT THE FLOW";
+"titleHeader" = "Menu";
+"subtitleHeader" = "Only Prototype";
+"titleFooter" = "Icons";
+"subtitleFooter" = "All icons used on the app";
