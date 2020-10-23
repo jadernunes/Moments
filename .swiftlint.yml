@@ -1,0 +1,59 @@
+excluded:
+  - Carthage
+  - Pods
+  - SwiftLint/Common/3rdPartyLib
+  - SkyFloatingLabelTextField
+disabled_rules:
+  - trailing_whitespace
+  - closure_parameter_position
+  - colon
+  - shorthand_operator
+  - identifier_name
+  - first_where
+  - force_unwrapping
+  - empty_string
+  - todo
+opt_in_rules:
+  - empty_count
+  - first_where
+  - force_unwrapping
+  - empty_string
+  - overridden_super_call
+  - let_var_whitespace
+  - mark
+  - multiline_literal_brackets
+  - opening_brace
+  - operator_usage_whitespace
+  - redundant_string_enum_value
+  - statement_position
+  - unneeded_parentheses_in_closure_argument
+  - unused_closure_parameter
+  - control_statement
+  - closure_spacing
+  - class_delegate_protocol
+
+force_try: warning
+force_cast: warning
+force_unwrapping: warning
+
+line_length:
+  warning: 150
+  error: 250
+  ignores_urls: true
+  ignores_function_declarations: true
+  ignores_comments: true
+
+function_body_length:
+  - 120
+  - 150
+file_length:
+  - 400
+  - 700
+cyclomatic_complexity:
+  - 10
+  - 20
+large_tuple:
+  - 3
+function_parameter_count:
+  - 5
+reporter: "xcode"
