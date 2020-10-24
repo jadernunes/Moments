@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
-struct Flow: Decodable {
+ 
+struct Flow {
     
     var title: String
 }
