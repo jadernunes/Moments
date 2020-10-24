@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeCoordinatorProtocol {
+    func openGalleries()
+}
+
 final class HomeCoordinator: Coordinator {
     
     // MARK: - Attributes
@@ -25,5 +29,16 @@ final class HomeCoordinator: Coordinator {
         let viewModel = HomeViewModel(coordinator: self)
         let viewController = HomeViewController(viewModel: viewModel)
         navigation?.viewControllers = [viewController]
+    }
+}
+
+// MARK: - Home coordinator
+
+extension HomeCoordinator: HomeCoordinatorProtocol {
+    
+    func openGalleries() {
+        guard let navigation = navigation else { return }
+        let coordinator = GalleriesCoordinator(presenter: navigation)
+        coordinator.start()
     }
 }

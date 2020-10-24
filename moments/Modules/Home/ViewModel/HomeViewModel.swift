@@ -9,13 +9,14 @@ protocol HomeViewModelProtocol {
 
     func countFlows() -> Int
     func getFlow(index: Int) -> Flow?
+    func openGalleries()
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
     
      // MARK: - Attributes
     
-    private let coordinator: Coordinator?
+    private let coordinator: HomeCoordinatorProtocol?
     private var flows = [
         Flow(title: "Home with pull refresh success"),
         Flow(title: "Image download error"),
@@ -25,8 +26,14 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     // MARK: - Life cycle
     
-    init(coordinator: Coordinator? = nil) {
+    init(coordinator: HomeCoordinatorProtocol? = nil) {
         self.coordinator = coordinator
+    }
+    
+    // MARK: - Navigations
+    
+    func openGalleries() {
+        coordinator?.openGalleries()
     }
     
     // MARK: - Custom methods
