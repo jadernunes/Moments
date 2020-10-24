@@ -50,7 +50,7 @@ final class GalleriesViewController: BaseViewController {
         return collectionView
     }()
     private(set) lazy var refreshControl: UIRefreshControl = {
-        let refresh = UIRefreshControl(frame: .infinite)
+        let refresh = UIRefreshControl(frame: .init())
         refresh.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         return refresh
     }()
@@ -125,7 +125,6 @@ final class GalleriesViewController: BaseViewController {
     @objc func refreshData() {
         collectionView.stopLoading()
         collectionView.reloadData()
-//        collectionView.endRefreshing(deadline: .now() + .seconds(3))
     }
 }
 
@@ -151,10 +150,10 @@ extension GalleriesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryCell.className, for: indexPath) as? GalleryCell,
-            let gallery = viewModel?.getGallery(index: indexPath.row)
+            let viewModelCell = viewModel?.getGallery(index: indexPath.row)
         else { return UICollectionViewCell() }
         
-        cell.configure(viewModel: GalleryCellViewModel(gallery: gallery))
+        cell.configure(viewModel: viewModelCell)
         return cell
     }
 }

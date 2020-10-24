@@ -13,7 +13,7 @@ extension GalleryCell {
     
     func createViewContent() {
         addSubview(viewContent)
-        viewContent.backgroundColor = .systemGray()
+        viewContent.backgroundColor = .lightGray
         viewContent
             .cornerRadius(value: 8)
             .addShadow()
@@ -35,6 +35,14 @@ extension GalleryCell {
         stack?.leftAnchor.constraint(equalTo: viewContent.safeAreaLayoutGuide.leftAnchor, constant: 0).isActive = true
         stack?.rightAnchor.constraint(equalTo: viewContent.safeAreaLayoutGuide.rightAnchor, constant: 0).isActive = true
         stack?.bottomAnchor.constraint(equalTo: viewContent.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+    }
+    
+    func createButtonRefresh() {
+        viewContent.addSubview(buttonRefresh)
+        buttonRefresh.translatesAutoresizingMaskIntoConstraints = false
+        buttonRefresh.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor, constant: 0).isActive = true
+        buttonRefresh.topAnchor.constraint(equalTo: viewContent.topAnchor, constant: 0).isActive = true
+        buttonRefresh.bottomAnchor.constraint(equalTo: viewContent.bottomAnchor, constant: 0).isActive = true
     }
     
     func createInfoView(iconName: String, count: Int) -> UIView {

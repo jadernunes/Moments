@@ -7,6 +7,7 @@
 
 struct Gallery: Decodable {
     
+    var id: String?
     var countComments: Int?
     var urlCover: String?
     var countViews: Int?
@@ -14,6 +15,7 @@ struct Gallery: Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case
+            id,
             ups,
             countComments = "comment_count",
             urlCover = "cover",

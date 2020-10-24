@@ -24,6 +24,7 @@ final class GalleryCellViewModel: GalleryCellViewModelProtocol {
     
     private let service: GalleryCellServiceProtocol
     private let gallery: Gallery
+    private var url: String = ""
     
     let isLoading = Dynamic<Bool>(false)
     let urlImage = Dynamic<String>("")
@@ -46,12 +47,12 @@ final class GalleryCellViewModel: GalleryCellViewModelProtocol {
         hasError.value = false
         isLoading.value = true
         
-        guard urlImage.value.isEmpty else { return }
+        guard url.isEmpty else { return }
         
         service.getImage(hash: gallery.urlCover ?? "") { [weak self] response in
             switch response {
             case .success(let result):
-                self?.urlImage.value = result?.data?.link ?? ""
+                self?.url = result?.data?.link ?? ""
             case .failure:
                 self?.hasError.value = true
             }

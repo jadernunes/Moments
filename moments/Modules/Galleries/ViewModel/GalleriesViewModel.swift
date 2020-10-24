@@ -12,7 +12,7 @@ protocol GalleriesViewModelProtocol {
     func close()
     func getData()
     func countGalleries() -> Int
-    func getGallery(index: Int) -> Gallery?
+    func getGallery(index: Int) -> GalleryCellViewModel?
 }
 
 final class GalleriesViewModel: GalleriesViewModelProtocol {
@@ -21,7 +21,7 @@ final class GalleriesViewModel: GalleriesViewModelProtocol {
     
     private let coordinator: GalleriesCoordinatorProtocol?
     private let service: GalleriesServiceProtocol
-    private var galleries = [Gallery]()
+    private var galleries = [GalleryCellViewModel]()
     
     let isLoading = Dynamic<Bool>(false)
     
@@ -36,10 +36,12 @@ final class GalleriesViewModel: GalleriesViewModelProtocol {
     
     func getData() {
         isLoading.value = true
+        
+        //TODO: - Create logic to request by page
         service.getTopWeek(page: 1) { [weak self] response in
             switch response {
             case .success(let result):
-                self?.galleries.append(contentsOf: result?.data ?? [])
+                self?.galleries.append(contentsOf: result?.data?.map({ GalleryCellViewModel(gallery: $0) }) ?? [])
             case .failure:
                 break //TODO: - Show error
             }
@@ -59,7 +61,7 @@ final class GalleriesViewModel: GalleriesViewModelProtocol {
         galleries.count
     }
     
-    func getGallery(index: Int) -> Gallery? {
+    func getGallery(index: Int) -> GalleryCellViewModel? {
         galleries[safe: index]
     }
 }
