@@ -6,6 +6,13 @@
   
 */
 
+// MARK: - General
+
+"genericError" = "Ops.:) something wrong!";
+"titleNoInternet" = "No internet!";
+"errorAuthentication" = "Authentication failed!";
+
+// MARK: - Screens
 
 "titleSectionHome" = "SELECT THE FLOW";
 "titleHeader" = "Menu";
