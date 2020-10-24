@@ -48,6 +48,16 @@
 		4BA2A7F52543A011002AB9BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BA2A7F82543A011002AB9BC /* Localizable.strings */; };
 		4BA2A7FE2543A0BE002AB9BC /* String+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A7FD2543A0BE002AB9BC /* String+Extesion.swift */; };
 		4BA2A7FF2543A0BE002AB9BC /* String+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A7FD2543A0BE002AB9BC /* String+Extesion.swift */; };
+		4BA2A80B2543A8FD002AB9BC /* GalleriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A80A2543A8FD002AB9BC /* GalleriesCoordinator.swift */; };
+		4BA2A80C2543A8FD002AB9BC /* GalleriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A80A2543A8FD002AB9BC /* GalleriesCoordinator.swift */; };
+		4BA2A8122543A90C002AB9BC /* GalleriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A8112543A90C002AB9BC /* GalleriesViewModel.swift */; };
+		4BA2A8132543A90C002AB9BC /* GalleriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A8112543A90C002AB9BC /* GalleriesViewModel.swift */; };
+		4BA2A8172543A91A002AB9BC /* GalleriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A8162543A91A002AB9BC /* GalleriesViewController.swift */; };
+		4BA2A8182543A91A002AB9BC /* GalleriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A8162543A91A002AB9BC /* GalleriesViewController.swift */; };
+		4BA2A8222543C781002AB9BC /* ButtonBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A8212543C781002AB9BC /* ButtonBack.swift */; };
+		4BA2A8232543C781002AB9BC /* ButtonBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A8212543C781002AB9BC /* ButtonBack.swift */; };
+		4BA2A8292543C97F002AB9BC /* GalleriesViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A8282543C97F002AB9BC /* GalleriesViewController+Extension.swift */; };
+		4BA2A82A2543C97F002AB9BC /* GalleriesViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A8282543C97F002AB9BC /* GalleriesViewController+Extension.swift */; };
 		B3FA678A0BCA8BEB500AC625 /* Pods_moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E8A70A55001961C2194F72 /* Pods_moments.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +101,11 @@
 		4BA2A7EB254397F1002AB9BC /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		4BA2A7F72543A011002AB9BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4BA2A7FD2543A0BE002AB9BC /* String+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extesion.swift"; sourceTree = "<group>"; };
+		4BA2A80A2543A8FD002AB9BC /* GalleriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesCoordinator.swift; sourceTree = "<group>"; };
+		4BA2A8112543A90C002AB9BC /* GalleriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesViewModel.swift; sourceTree = "<group>"; };
+		4BA2A8162543A91A002AB9BC /* GalleriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesViewController.swift; sourceTree = "<group>"; };
+		4BA2A8212543C781002AB9BC /* ButtonBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonBack.swift; path = moments/Modules/Galleries/View/ButtonBack.swift; sourceTree = SOURCE_ROOT; };
+		4BA2A8282543C97F002AB9BC /* GalleriesViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleriesViewController+Extension.swift"; sourceTree = "<group>"; };
 		73E8A70A55001961C2194F72 /* Pods_moments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8050CB960F8A76178567CE07 /* Pods-momentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momentsTests.debug.xcconfig"; path = "Target Support Files/Pods-momentsTests/Pods-momentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A093900F9D4D5F0F4B1E8B44 /* Pods-moments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moments.release.xcconfig"; path = "Target Support Files/Pods-moments/Pods-moments.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,8 +157,8 @@
 			children = (
 				4B20EA7A25423540008A586D /* AppDelegate.swift */,
 				4B20EB67254274B9008A586D /* AppCoordinator.swift */,
+				4BA2A81F2543C768002AB9BC /* Components */,
 				4BA2A7D125439623002AB9BC /* Models */,
-				4BA2A7D025439612002AB9BC /* Components */,
 				4B20EB2025426E69008A586D /* General */,
 				4B20EB4025427180008A586D /* Extensions */,
 				4B20EAAF25423676008A586D /* Resources */,
@@ -178,6 +193,7 @@
 			children = (
 				4B20EB4A25427226008A586D /* BaseViewController.swift */,
 				4B20EB1625426DF9008A586D /* Home */,
+				4BA2A8062543A756002AB9BC /* Galleries */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -240,13 +256,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4BA2A7D025439612002AB9BC /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		4BA2A7D125439623002AB9BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +295,57 @@
 				4BA2A7DF254396AD002AB9BC /* FlowCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4BA2A8062543A756002AB9BC /* Galleries */ = {
+			isa = PBXGroup;
+			children = (
+				4BA2A8092543A8A7002AB9BC /* View */,
+				4BA2A8082543A8A0002AB9BC /* ViewModel */,
+				4BA2A8072543A87C002AB9BC /* Coordinator */,
+			);
+			path = Galleries;
+			sourceTree = "<group>";
+		};
+		4BA2A8072543A87C002AB9BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4BA2A80A2543A8FD002AB9BC /* GalleriesCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4BA2A8082543A8A0002AB9BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BA2A8112543A90C002AB9BC /* GalleriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BA2A8092543A8A7002AB9BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BA2A8162543A91A002AB9BC /* GalleriesViewController.swift */,
+				4BA2A8282543C97F002AB9BC /* GalleriesViewController+Extension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BA2A81F2543C768002AB9BC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4BA2A8202543C773002AB9BC /* ButtonBack */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4BA2A8202543C773002AB9BC /* ButtonBack */ = {
+			isa = PBXGroup;
+			children = (
+				4BA2A8212543C781002AB9BC /* ButtonBack.swift */,
+			);
+			path = ButtonBack;
 			sourceTree = "<group>";
 		};
 		6B07EF98542FD0AD7FB74EA8 /* Pods */ = {
@@ -506,10 +566,15 @@
 				4B20EB7A254277D8008A586D /* UIColor+Extension.swift in Sources */,
 				4B20EB86254308AA008A586D /* NSObject+Extension.swift in Sources */,
 				4BA2A7E725439707002AB9BC /* FlowCellViewModel.swift in Sources */,
+				4BA2A80B2543A8FD002AB9BC /* GalleriesCoordinator.swift in Sources */,
+				4BA2A8222543C781002AB9BC /* ButtonBack.swift in Sources */,
 				4B20EB2C25426F3A008A586D /* HomeViewModel.swift in Sources */,
+				4BA2A8122543A90C002AB9BC /* GalleriesViewModel.swift in Sources */,
 				4B20EB68254274B9008A586D /* AppCoordinator.swift in Sources */,
+				4BA2A8292543C97F002AB9BC /* GalleriesViewController+Extension.swift in Sources */,
 				4BA2A7D325439634002AB9BC /* Flow.swift in Sources */,
 				4B20EA7B25423540008A586D /* AppDelegate.swift in Sources */,
+				4BA2A8172543A91A002AB9BC /* GalleriesViewController.swift in Sources */,
 				4B20EB9B25430D4F008A586D /* Collection+Extension.swift in Sources */,
 				4B20EB4B25427226008A586D /* BaseViewController.swift in Sources */,
 				4B20EB8B25430946008A586D /* Dynamic.swift in Sources */,
@@ -533,8 +598,13 @@
 				4B20EB87254308AA008A586D /* NSObject+Extension.swift in Sources */,
 				4BA2A7E825439707002AB9BC /* FlowCellViewModel.swift in Sources */,
 				4BA2A7FF2543A0BE002AB9BC /* String+Extesion.swift in Sources */,
+				4BA2A8182543A91A002AB9BC /* GalleriesViewController.swift in Sources */,
 				4BA2A7D825439637002AB9BC /* Flow.swift in Sources */,
+				4BA2A8232543C781002AB9BC /* ButtonBack.swift in Sources */,
 				4B20EB7625427745008A586D /* UIViewController+Extension.swift in Sources */,
+				4BA2A8132543A90C002AB9BC /* GalleriesViewModel.swift in Sources */,
+				4BA2A80C2543A8FD002AB9BC /* GalleriesCoordinator.swift in Sources */,
+				4BA2A82A2543C97F002AB9BC /* GalleriesViewController+Extension.swift in Sources */,
 				4B20EB8C25430946008A586D /* Dynamic.swift in Sources */,
 				4B20EA9225423542008A586D /* momentsTests.swift in Sources */,
 				4B20EB3425426FBA008A586D /* HomeViewController.swift in Sources */,
