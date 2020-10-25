@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "newwwwww.png",
+      "filename" : "reload.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "newwwwww-1.png",
+      "filename" : "reload@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "newwwwww-2.png",
+      "filename" : "reload@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

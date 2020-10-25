@@ -43,6 +43,7 @@ final class HomeViewController: BaseViewController {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.alwaysBounceVertical = true
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.backgroundColor = .systemGray()
         tableView.contentInset = .init(top: 64, left: 0, bottom: 0, right: 0)
         tableView.register(FlowCell.self, forCellReuseIdentifier: FlowCell.className)
@@ -137,5 +138,14 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.configure(viewModel: FlowCellViewModel(flow: flow))
         return cell
+    }
+}
+
+// MARK: - TableView delegate
+
+extension HomeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.openGalleries()
     }
 }
