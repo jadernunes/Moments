@@ -54,6 +54,25 @@ final class GalleriesViewController: BaseViewController {
         refresh.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         return refresh
     }()
+    private lazy var labelError: UILabel = {
+        $0.text = .localizable("erroMessage")
+        $0.textColor = .systemGray()
+        return $0
+    }(UILabel())
+    private lazy var buttonRefresh: ButtonReload = {
+        $0.addTarget(self, action: #selector(requestData), for: .touchUpInside)
+        return $0
+    }(ButtonReload())
+    private(set) lazy var stackError: UIStackView = {
+        let stack = UIStackView(arrangedSubviews:[
+            buttonRefresh,
+            labelError
+        ])
+        stack.axis = .vertical
+        stack.distribution = .fillEqually
+        stack.alignment = .center
+        return stack
+    }()
     
     // MARK: - Life cycle
     
@@ -73,7 +92,7 @@ final class GalleriesViewController: BaseViewController {
         bindUI()
         setupUI()
         createElements()
-        viewModel?.getData()
+        requestData()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -95,6 +114,7 @@ final class GalleriesViewController: BaseViewController {
     
     private func bindUI() {
         bindLoader()
+        bindError()
     }
     
     private func createElements() {
@@ -122,6 +142,10 @@ final class GalleriesViewController: BaseViewController {
         viewModel?.close()
     }
     
+    @objc func requestData() {
+        viewModel?.getData()
+    }
+    
     @objc func refreshData() {
         collectionView.stopLoading()
         collectionView.reloadData()
@@ -135,6 +159,12 @@ extension GalleriesViewController {
     func bindLoader() {
         viewModel?.isLoading.bind { [weak self] isLoading in
             isLoading ? self?.collectionView.startLoading() : self?.refreshData()
+        }
+    }
+    
+    func bindError() {
+        viewModel?.hasError.bind { [weak self] hasError in
+            hasError ? self?.addError() : self?.stackError.removeFromSuperview()
         }
     }
 }

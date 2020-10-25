@@ -8,6 +8,7 @@
 protocol GalleriesViewModelProtocol {
     
     var isLoading: Dynamic<Bool> { get }
+    var hasError: Dynamic<Bool> { get }
     
     func close()
     func getData()
@@ -24,6 +25,7 @@ final class GalleriesViewModel: GalleriesViewModelProtocol {
     private var galleries = [GalleryCellViewModel]()
     
     let isLoading = Dynamic<Bool>(false)
+    let hasError = Dynamic<Bool>(false)
     
     // MARK: - Life cycle
     
@@ -36,6 +38,7 @@ final class GalleriesViewModel: GalleriesViewModelProtocol {
     
     func getData() {
         isLoading.value = true
+        hasError.value = false
         
         //TODO: - Create logic to request by page
         service.getTopWeek(page: 1) { [weak self] response in
@@ -43,7 +46,7 @@ final class GalleriesViewModel: GalleriesViewModelProtocol {
             case .success(let result):
                 self?.galleries.append(contentsOf: result?.data?.map({ GalleryCellViewModel(gallery: $0) }) ?? [])
             case .failure:
-                break //TODO: - Show error
+                self?.hasError.value = true
             }
             self?.isLoading.value = false
         }

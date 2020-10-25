@@ -7,6 +7,8 @@
 
 // MARK: - Constraints
 
+import UIKit
+
 extension GalleriesViewController {
     
     func addButtonBack() {
@@ -31,5 +33,10 @@ extension GalleriesViewController {
         collectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    }
+    
+    func addError() {
+        view.addSubview(stackError)
+        stackError.centerInSuperview()
     }
 }

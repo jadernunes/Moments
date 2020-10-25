@@ -32,12 +32,10 @@ final class GalleryCell: UICollectionViewCell {
             createStack()
         }
     }
-    private(set) lazy var buttonRefresh: UIButton = {
-        $0.setImage(UIImage(named: "refresh"), for: .normal)
-        $0.tintColor = .darkGray()
+    private(set) lazy var buttonRefresh: ButtonReload = {
         $0.addTarget(self, action: #selector(refreshData), for: .touchUpInside)
         return $0
-    }(UIButton())
+    }(ButtonReload())
     
     // MARK: - Life cycle
     

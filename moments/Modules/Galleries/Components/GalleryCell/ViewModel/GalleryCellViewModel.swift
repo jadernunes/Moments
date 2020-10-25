@@ -24,7 +24,11 @@ final class GalleryCellViewModel: GalleryCellViewModelProtocol {
     
     private let service: GalleryCellServiceProtocol
     private let gallery: Gallery
-    private var url: String = ""
+    private var url: String = "" {
+        didSet {
+            urlImage.value = url
+        }
+    }
     
     let isLoading = Dynamic<Bool>(false)
     let urlImage = Dynamic<String>("")
