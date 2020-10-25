@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  moments
+
+  Created by Jader Borba Nunes on 23/10/20.
+  
+*/
+
+// MARK: - General
+
+"genericError" = "Ops.:) something wrong!";
+"titleNoInternet" = "No internet!";
+"errorAuthentication" = "Authentication failed!";
+
+// MARK: - Flows
+
+"flowSuccess" = "Home with pull refresh success";
+"flowImageError" = "Image download error";
+"flowListError" = "Home empty error";
+"flowLandscape" = "Landscape Mode";
+
+// MARK: - Screens
+
+"titleSectionHome" = "SELECT THE FLOW";
+"titleHeader" = "Menu";
+"subtitleHeader" = "Only Prototype";
+"titleFooter" = "Icons";
+"subtitleFooter" = "All icons used on the app";
+"titleButtonBack" = "Back to menu";
+"erroMessage" = "Oh, failed to load galleries";
