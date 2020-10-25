@@ -32,10 +32,20 @@
 		4B134BAC25449A4500638706 /* ImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BAA25449A4500638706 /* ImageResult.swift */; };
 		4B134BC42544F1DA00638706 /* ButtonReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BC32544F1D900638706 /* ButtonReload.swift */; };
 		4B134BC52544F1DA00638706 /* ButtonReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BC32544F1D900638706 /* ButtonReload.swift */; };
+		4B134BD32544FC6C00638706 /* FileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BD22544FC6C00638706 /* FileDecoder.swift */; };
+		4B134BD42544FC6C00638706 /* FileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BD22544FC6C00638706 /* FileDecoder.swift */; };
+		4B134BD92544FC8B00638706 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BD82544FC8B00638706 /* Mocks.swift */; };
+		4B134BDA2544FC8B00638706 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BD82544FC8B00638706 /* Mocks.swift */; };
+		4B134BE22544FCE100638706 /* galleries.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B134BE12544FCE100638706 /* galleries.json */; };
+		4B134BE32544FCE100638706 /* galleries.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B134BE12544FCE100638706 /* galleries.json */; };
+		4B134BEA2544FD4400638706 /* GalleriesStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BE92544FD4300638706 /* GalleriesStub.swift */; };
+		4B134BEB2544FD4400638706 /* GalleriesStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BE92544FD4300638706 /* GalleriesStub.swift */; };
+		4B134BF42544FDE400638706 /* GalleriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B134BF22544FDE400638706 /* GalleriesTests.swift */; };
+		4B134BF92544FF5C00638706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20EA7A25423540008A586D /* AppDelegate.swift */; };
+		4B134BFC2544FF6C00638706 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20EB1A25426E22008A586D /* HomeCoordinator.swift */; };
 		4B20EA7B25423540008A586D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20EA7A25423540008A586D /* AppDelegate.swift */; };
 		4B20EA8425423542008A586D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B20EA8325423542008A586D /* Assets.xcassets */; };
 		4B20EA8725423542008A586D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B20EA8525423542008A586D /* LaunchScreen.storyboard */; };
-		4B20EA9225423542008A586D /* momentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20EA9125423542008A586D /* momentsTests.swift */; };
 		4B20EB1B25426E22008A586D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20EB1A25426E22008A586D /* HomeCoordinator.swift */; };
 		4B20EB2225426E79008A586D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20EB2125426E79008A586D /* Coordinator.swift */; };
 		4B20EB2325426E79008A586D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20EB2125426E79008A586D /* Coordinator.swift */; };
@@ -136,13 +146,17 @@
 		4B134BA32544935700638706 /* GalleryCellService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellService.swift; sourceTree = "<group>"; };
 		4B134BAA25449A4500638706 /* ImageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResult.swift; sourceTree = "<group>"; };
 		4B134BC32544F1D900638706 /* ButtonReload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonReload.swift; sourceTree = "<group>"; };
+		4B134BD22544FC6C00638706 /* FileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecoder.swift; sourceTree = "<group>"; };
+		4B134BD82544FC8B00638706 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		4B134BE12544FCE100638706 /* galleries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = galleries.json; sourceTree = "<group>"; };
+		4B134BE92544FD4300638706 /* GalleriesStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesStub.swift; sourceTree = "<group>"; };
+		4B134BF22544FDE400638706 /* GalleriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesTests.swift; sourceTree = "<group>"; };
 		4B20EA7725423540008A586D /* moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B20EA7A25423540008A586D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B20EA8325423542008A586D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B20EA8625423542008A586D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B20EA8825423542008A586D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B20EA8D25423542008A586D /* momentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = momentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B20EA9125423542008A586D /* momentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momentsTests.swift; sourceTree = "<group>"; };
 		4B20EA9325423542008A586D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B20EB1A25426E22008A586D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		4B20EB2125426E79008A586D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -276,6 +290,24 @@
 			path = ButtonReload;
 			sourceTree = "<group>";
 		};
+		4B134BD72544FC8100638706 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4B134BD82544FC8B00638706 /* Mocks.swift */,
+				4B134BE12544FCE100638706 /* galleries.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4B134BE82544FD2500638706 /* Galleries */ = {
+			isa = PBXGroup;
+			children = (
+				4B134BE92544FD4300638706 /* GalleriesStub.swift */,
+				4B134BF22544FDE400638706 /* GalleriesTests.swift */,
+			);
+			path = Galleries;
+			sourceTree = "<group>";
+		};
 		4B20EA6E25423540008A586D = {
 			isa = PBXGroup;
 			children = (
@@ -315,8 +347,10 @@
 		4B20EA9025423542008A586D /* momentsTests */ = {
 			isa = PBXGroup;
 			children = (
-				4B20EA9125423542008A586D /* momentsTests.swift */,
 				4B20EA9325423542008A586D /* Info.plist */,
+				4B134BD22544FC6C00638706 /* FileDecoder.swift */,
+				4B134BD72544FC8100638706 /* Mocks */,
+				4B134BE82544FD2500638706 /* Galleries */,
 			);
 			path = momentsTests;
 			sourceTree = "<group>";
@@ -634,6 +668,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B134BE22544FCE100638706 /* galleries.json in Resources */,
 				4B20EB9325430C23008A586D /* .swiftlint.yml in Resources */,
 				4BA2A7F52543A011002AB9BC /* Localizable.strings in Resources */,
 				4B20EA8725423542008A586D /* LaunchScreen.storyboard in Resources */,
@@ -646,6 +681,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B134BE32544FCE100638706 /* galleries.json in Resources */,
 				4BDA2AAB2543DB1C0068AC59 /* Config.plist in Resources */,
 				4B20EB9425430C23008A586D /* .swiftlint.yml in Resources */,
 			);
@@ -777,6 +813,7 @@
 			files = (
 				4BA2A85D2543D2B7002AB9BC /* ErrorCustom.swift in Sources */,
 				4B20EB7525427745008A586D /* UIViewController+Extension.swift in Sources */,
+				4B134BD32544FC6C00638706 /* FileDecoder.swift in Sources */,
 				4B20EB2225426E79008A586D /* Coordinator.swift in Sources */,
 				4B134B822544514200638706 /* GalleryCell.swift in Sources */,
 				4BA2A7EC254397F1002AB9BC /* HomeViewController+Extension.swift in Sources */,
@@ -799,12 +836,14 @@
 				4B20EB2C25426F3A008A586D /* HomeViewModel.swift in Sources */,
 				4BA2A8392543D192002AB9BC /* Reachability.swift in Sources */,
 				4BDA2AA22543D90D0068AC59 /* Encodable+Extension.swift in Sources */,
+				4B134BD92544FC8B00638706 /* Mocks.swift in Sources */,
 				4BA2A8122543A90C002AB9BC /* GalleriesViewModel.swift in Sources */,
 				4B134BA42544935700638706 /* GalleryCellService.swift in Sources */,
 				4B20EB68254274B9008A586D /* AppCoordinator.swift in Sources */,
 				4BA2A8292543C97F002AB9BC /* GalleriesViewController+Extension.swift in Sources */,
 				4BA2A8622543D65D002AB9BC /* Data+Extension.swift in Sources */,
 				4BA2A7D325439634002AB9BC /* Flow.swift in Sources */,
+				4B134BEA2544FD4400638706 /* GalleriesStub.swift in Sources */,
 				4BA2A82E2543CD38002AB9BC /* Gallery.swift in Sources */,
 				4B134B7B2544510000638706 /* GalleryCellViewModel.swift in Sources */,
 				4B20EA7B25423540008A586D /* AppDelegate.swift in Sources */,
@@ -833,6 +872,7 @@
 				4B134B9F25447F3300638706 /* InfoView+Extension.swift in Sources */,
 				4BA2A8342543D0EE002AB9BC /* Image.swift in Sources */,
 				4BDA2AB22543DC660068AC59 /* Config.swift in Sources */,
+				4B134BEB2544FD4400638706 /* GalleriesStub.swift in Sources */,
 				4B134B9A25447E6E00638706 /* Int+Extension.swift in Sources */,
 				4BA2A7ED254397F1002AB9BC /* HomeViewController+Extension.swift in Sources */,
 				4BA2A7E1254396AD002AB9BC /* FlowCell.swift in Sources */,
@@ -846,13 +886,17 @@
 				4B134B95254475C700638706 /* GalleryCell+Extension.swift in Sources */,
 				4B20EB2D25426F3A008A586D /* HomeViewModel.swift in Sources */,
 				4BA2A85E2543D2B7002AB9BC /* ErrorCustom.swift in Sources */,
+				4B134BDA2544FC8B00638706 /* Mocks.swift in Sources */,
 				4B20EB87254308AA008A586D /* NSObject+Extension.swift in Sources */,
+				4B134BFC2544FF6C00638706 /* HomeCoordinator.swift in Sources */,
 				4BA2A7E825439707002AB9BC /* FlowCellViewModel.swift in Sources */,
 				4B134B882544549100638706 /* UIImageView+Extension.swift in Sources */,
 				4B134B712543F31900638706 /* RefreshControl.swift in Sources */,
 				4BA2A7FF2543A0BE002AB9BC /* String+Extesion.swift in Sources */,
 				4BA2A8182543A91A002AB9BC /* GalleriesViewController.swift in Sources */,
+				4B134BF42544FDE400638706 /* GalleriesTests.swift in Sources */,
 				4BA2A7D825439637002AB9BC /* Flow.swift in Sources */,
+				4B134BD42544FC6C00638706 /* FileDecoder.swift in Sources */,
 				4B134BA52544935700638706 /* GalleryCellService.swift in Sources */,
 				4B134BAC25449A4500638706 /* ImageResult.swift in Sources */,
 				4BA2A8232543C781002AB9BC /* ButtonBack.swift in Sources */,
@@ -863,8 +907,8 @@
 				4B20EB8C25430946008A586D /* Dynamic.swift in Sources */,
 				4BDA2AC52543DF760068AC59 /* GalleriesService.swift in Sources */,
 				4B134B6B2543E90B00638706 /* Constants.swift in Sources */,
+				4B134BF92544FF5C00638706 /* AppDelegate.swift in Sources */,
 				4B134B7C2544510000638706 /* GalleryCellViewModel.swift in Sources */,
-				4B20EA9225423542008A586D /* momentsTests.swift in Sources */,
 				4BDA2AA32543D90D0068AC59 /* Encodable+Extension.swift in Sources */,
 				4BDA2ACE2543E46F0068AC59 /* GalleryResult.swift in Sources */,
 				4BA2A82F2543CD38002AB9BC /* Gallery.swift in Sources */,

@@ -6,14 +6,20 @@
 //
 
 protocol GalleriesViewModelProtocol {
+    typealias CompletionGeneric = (() -> Void)
     
     var isLoading: Dynamic<Bool> { get }
     var hasError: Dynamic<Bool> { get }
     
     func close()
-    func getData()
+    func getData(_ completion: CompletionGeneric?)
     func countGalleries() -> Int
     func getGallery(index: Int) -> GalleryCellViewModel?
+}
+
+extension GalleriesViewModelProtocol {
+    
+    func getData(_ completion: CompletionGeneric? = nil) { getData(completion) }
 }
 
 final class GalleriesViewModel: GalleriesViewModelProtocol {
@@ -36,7 +42,7 @@ final class GalleriesViewModel: GalleriesViewModelProtocol {
     
     // MARK: - Services
     
-    func getData() {
+    func getData(_ completion: CompletionGeneric? = nil) {
         isLoading.value = true
         hasError.value = false
         
@@ -49,6 +55,7 @@ final class GalleriesViewModel: GalleriesViewModelProtocol {
                 self?.hasError.value = true
             }
             self?.isLoading.value = false
+            completion?()
         }
     }
     
